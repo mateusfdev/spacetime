@@ -1,0 +1,63 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: 'var(--font-roboto)',
+        alt: 'var(--font-bai-jamjuree)',
+      },
+
+      colors: {
+        gray: {
+          50: '#eaeaea',
+          100: '#bebebf',
+          200: '#9e9ea0',
+          300: '#727275',
+          400: '#56565a',
+          500: '#2c2c31',
+          600: '#28282d',
+          700: '#1f1f23',
+          800: '#18181b',
+          900: '#121215',
+        },
+        purple: {
+          50: '#f3eefc',
+          100: '#d8cbf7',
+          200: '#c6b2f3',
+          300: '#ab8eee',
+          400: '#9b79ea',
+          500: '#8257e5',
+          600: '#764fd0',
+          700: '#5c3ea3',
+          800: '#48307e',
+          900: '#372560',
+        },
+      },
+
+      backgroundImage: {
+        stripes:
+          'linear-gradient(to bottom, rgba(255 ,255 ,255 , 0.1), rgba(255 ,255 ,255 , 0.1) 12.5%, transparent 12.5%, transparent)',
+      },
+
+      // substituindo tamanho de font size
+      fontSize: {
+        '5xl': '2.5rem',
+      },
+
+      backgroundSize: {
+        stripes: '100% 8px',
+      },
+
+      // add blur maior do que o do tailwind
+      blur: {
+        full: '194px',
+      },
+    },
+  },
+  plugins: [],
+}

@@ -4,12 +4,12 @@ import { prisma } from '../lib/prisma'
 export async function memoriesRoutes(app: FastifyInstance) {
   // listagem de memoria
   app.get('/memories', async () => {
-    const memories = away prisma.memory.findMany({
+    const memories = await prisma.user.findMany()
       onderBy: {
         createdAt:'asc',
-      }
+      },
     })
-  })
+  }
 
   // detalhe  de memoria
   app.get('/memories/:id', async () => {})
